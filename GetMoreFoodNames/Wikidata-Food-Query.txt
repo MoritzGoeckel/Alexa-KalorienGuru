@@ -1,0 +1,14 @@
+# https://query.wikidata.org/
+
+SELECT DISTINCT ?itemLabel WHERE { #?item 
+  {
+    ?item wdt:P279 ?subclass.
+    ?subclass wdt:P279+ wd:Q2095.
+  }
+  FILTER(EXISTS {
+   ?item rdfs:label ?itemLabel.
+   FILTER(LANG(?itemLabel) = "de")
+  })
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "de". }
+}
+LIMIT 100000

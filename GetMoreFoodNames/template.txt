@@ -1,0 +1,7 @@
+{
+          "id": null,
+          "name": {
+            "value": "huhn",
+            "synonyms": []
+          }
+        }
