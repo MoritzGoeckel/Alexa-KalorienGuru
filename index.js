@@ -56,10 +56,10 @@ const handlers = {
         this.emit(':ask', "frage mich nach einem lebensmittel und ich sage dir wie viele kalorien es auf 100 gramm hat. zum beispiel: wie viele kalorien haben karotten");
     },
     'AMAZON.CancelIntent': function () {
-        this.emit(':tell', this.t('STOP_MESSAGE'));
+        this.emit(':tell', "Okay");
     },
     'AMAZON.StopIntent': function () {
-        this.emit(':tell', this.t('STOP_MESSAGE'));
+        this.emit(':tell', "Okay");
     },
 };
 
